@@ -1,0 +1,45 @@
+.house-details {
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+.featured-head {
+  padding: 25px;
+}
+.more-specific {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 15px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+.price {
+  color: #24355a;
+  font-size: 18px;
+  font-weight: 700;
+}
+.price em {
+  color: #767676;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: lowercase;
+}
+.home-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #24355a;
+}
+.single-house p {
+  font-size: 15px;
+}
+.featured-footer {
+  border-top: 1px solid #eee;
+  padding: 10px 20px;
+  background: #fcfcfc;
+  color: #7b8491;
+}
+.house-details svg {
+  margin: -3px 7px 0 0;
+}
+.single-house {
+  margin-bottom: 30px;
+}

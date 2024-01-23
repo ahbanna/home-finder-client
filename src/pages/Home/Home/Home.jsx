@@ -1,7 +1,9 @@
+import AllHouses from "../AllHouses/AllHouses";
+
 const Home = () => {
   return (
     <div>
-      <h2>This is home page</h2>
+      <AllHouses></AllHouses>
     </div>
   );
 };
