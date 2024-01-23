@@ -36,7 +36,8 @@
 }
 
 .register-area input,
-.register-area select {
+.register-area select,
+.login-area input {
   width: 100%;
   padding: 6px;
   margin-bottom: 10px;
@@ -54,7 +55,6 @@
   padding: 10px;
   border: none;
   cursor: pointer;
-  width: 100%;
   margin-top: 20px;
 }
 .register-area button:hover {

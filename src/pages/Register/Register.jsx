@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./Register.css";
 import { Container } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Register = () => {
   const [fullName, setFullName] = useState("");
@@ -10,7 +11,7 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleRegistration = (e) => {
+  const handleRegistration = async (e) => {
     e.preventDefault();
     console.log("Registration data:", {
       fullName,
@@ -19,14 +20,58 @@ const Register = () => {
       email,
       password,
     });
+
+    try {
+      const response = await fetch("http://localhost:5000/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fullName,
+          role,
+          phoneNumber,
+          email,
+          password,
+        }),
+      });
+
+      if (response.ok) {
+        console.log("Registration successful");
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Registration successful",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        // Optionally, you can redirect the user to the login page or perform other actions.
+      } else {
+        console.error("Registration failed");
+        // Handle registration failure, show error messages, etc.
+        Swal.fire({
+          icon: "error",
+          title: "User is already exists",
+        });
+      }
+    } catch (error) {
+      console.error("Error during registration:", error);
+      // Handle network errors, server down, etc.
+      Swal.fire({
+        icon: "error",
+        title: "Registration failed",
+        text: "Please check your information and try again.",
+      });
+    }
   };
+
   return (
     <div className="register-area">
       <Container>
         <div className="form-content">
           <div className="form-title">
-            <NavLink to="/login">Login</NavLink>{" "}
-            <NavLink to="/register">Register</NavLink>{" "}
+            <NavLink to="/login">Login</NavLink>
+            <NavLink to="/register">Register</NavLink>
           </div>
           <form onSubmit={handleRegistration}>
             <label>

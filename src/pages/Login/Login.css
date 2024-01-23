@@ -1,0 +1,23 @@
+.login-area {
+  padding: 50px 0;
+}
+.login-form {
+  width: 50%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.login-area a.active {
+  color: #f7395a;
+  border-bottom: 2px solid #f7395a;
+  margin-right: 20px;
+}
+.login-area button {
+  background: #f7395a;
+  transition: 0.3s;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+}
