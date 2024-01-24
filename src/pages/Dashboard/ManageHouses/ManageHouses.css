@@ -1,0 +1,18 @@
+.manage-house-area {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 50px 0;
+}
+.manage-house-area button {
+  background: #f7395a;
+  border: none;
+  padding: 5px 20px;
+  color: #fff;
+  font-weight: 700;
+  width: 100%;
+  transition: 0.3s;
+}
+.manage-house-area button:hover {
+  background: #000;
+  transition: 0.3s;
+}

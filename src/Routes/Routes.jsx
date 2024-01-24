@@ -7,6 +7,10 @@ import Contact from "../pages/Contact/Contact";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import AddNewHouse from "../pages/Dashboard/AddNewHouse/AddNewHouse";
+import Dashboard from "../Layout/Dashboard";
+import MyHouses from "../pages/Dashboard/MyHouses/MyHouses";
+import ManageHouses from "../pages/Dashboard/ManageHouses/ManageHouses";
+import AllHouses from "../pages/Home/AllHouses/AllHouses";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -36,9 +40,28 @@ export const router = createBrowserRouter([
         path: "/register",
         element: <Register></Register>,
       },
+      // {
+      //   path: "/addnewhouse",
+      //   element: <AddNewHouse></AddNewHouse>,
+      // },
+    ],
+  },
+  {
+    path: "dashboard",
+    element: <Dashboard></Dashboard>,
+    children: [
       {
-        path: "/addnewhouse",
+        path: "addnewhouse",
         element: <AddNewHouse></AddNewHouse>,
+      },
+      {
+        path: "myhouses",
+        // element: <MyHouses></MyHouses>,
+        element: <AllHouses></AllHouses>,
+      },
+      {
+        path: "managehouses",
+        element: <ManageHouses></ManageHouses>,
       },
     ],
   },

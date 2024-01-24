@@ -89,6 +89,10 @@ ul {
   padding: 0 !important;
   margin: 0 !important;
 }
+li {
+  list-style: none;
+  text-decoration: none;
+}
 ol {
   counter-reset: counter;
   padding-left: 0;
@@ -97,4 +101,23 @@ ol {
 ol li {
   list-style: none;
   margin-bottom: 1rem;
+}
+
+/* Dashboard */
+.dashboard-area {
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+.sidebar {
+  padding: 100px;
+  background: #f7395a;
+}
+.sidebar li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+.sidebar li:hover a {
+  color: #000;
+  transition: 0.3s;
 }

@@ -19,12 +19,15 @@ const Header = () => {
               <NavLink to="/apartments">Apartments</NavLink>
               <NavLink to="/about">About</NavLink>
               <NavLink to="/contact">Contact</NavLink>
-              <NavLink to="/addnewhouse">Add New House</NavLink>
+              <NavLink to="/dashboard">My Dashboard</NavLink>
+              {/* <NavLink to="/addnewhouse">Add New House</NavLink> */}
             </Nav>
           </div>
           <div className="login-reg">
-            <NavLink to="/login">Login</NavLink>
-            <NavLink to="/register">Register</NavLink>
+            <Nav>
+              <NavLink to="/login">Login</NavLink>
+              <NavLink to="/register">Register</NavLink>
+            </Nav>
           </div>
         </Navbar>
       </Container>

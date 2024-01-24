@@ -1,3 +1,7 @@
+.header-area {
+  border-bottom: 1px solid #eee;
+  background: #fcfcfc;
+}
 .header-area .navbar {
   display: flex;
   justify-content: space-between;
@@ -10,4 +14,8 @@
   color: #24355a;
   font-size: 18px;
   margin: 0 10px;
+}
+.navbar-nav a.active {
+  color: #f7395a;
+  font-weight: 700;
 }

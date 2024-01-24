@@ -22,19 +22,22 @@ const Register = () => {
     });
 
     try {
-      const response = await fetch("http://localhost:5000/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          fullName,
-          role,
-          phoneNumber,
-          email,
-          password,
-        }),
-      });
+      const response = await fetch(
+        "https://home-finder-server-d0k4aguh9-ahbanna.vercel.app/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            fullName,
+            role,
+            phoneNumber,
+            email,
+            password,
+          }),
+        }
+      );
 
       if (response.ok) {
         console.log("Registration successful");

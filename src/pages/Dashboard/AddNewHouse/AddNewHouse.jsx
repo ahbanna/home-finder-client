@@ -33,7 +33,7 @@ const AddNewHouse = () => {
     console.log(newHouse);
 
     // send data to server starts
-    fetch("http://localhost:5000/allhouses", {
+    fetch("https://home-finder-server-d0k4aguh9-ahbanna.vercel.app/allhouses", {
       method: "POST",
       headers: {
         "content-type": "application/json",

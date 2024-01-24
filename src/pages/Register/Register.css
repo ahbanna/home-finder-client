@@ -61,3 +61,8 @@
   background-color: #000;
   transition: 0.3s;
 }
+.form-title a {
+  text-decoration: none;
+  font-size: 22px;
+  color: #000;
+}

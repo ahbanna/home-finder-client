@@ -11,10 +11,13 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/login", {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        "https://home-finder-server-pght7p0k1-ahbanna.vercel.app/login",
+        {
+          email,
+          password,
+        }
+      );
       const token = response.data.token;
 
       localStorage.setItem("token", token);
@@ -37,33 +40,6 @@ const Login = () => {
 
   return (
     <div className="login-area">
-      {/* <Container>
-        <div className="form-content">
-          <div className="form-title">
-            <NavLink to="/login">Login</NavLink>{" "}
-            <NavLink to="/register">Register</NavLink>{" "}
-          </div>
-          <div className="login-form">
-            <div>
-              <label>Email:</label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-            <div>
-              <label>Password:</label>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </div>
-            <button onClick={handleLogin}>Login</button>
-          </div>
-        </div>
-      </Container> */}
       <Container>
         <div className="form-content">
           <div className="form-title">
